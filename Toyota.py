@@ -1,22 +1,24 @@
-class Toyota:
-    def __init__(self, color, brand):
-        self.color = color
-        self.brand = brand
-
-    def start_engine(self):
-        return f"The {self.color} {self.brand} engine has started."
-
-    def stop_engine(self):
-        return f"The {self.year} Toyota {self.model} engine has stopped."
-# Example usage:
-
-toyota_camry = Toyota(color="red", brand="Toyota")
-
-print(toyota_camry.start_engine())
-print(toyota_camry.stop_engine())
+class Car:
+    def start(self):
+        print("Car is started.....")
+    
+    def stop(self):
+        print("Car is stopped.....")
+        
+    def drive(self):
+        print("Car is driving.....")
 
 
+class ToyotaCar(Car):
+    def __init__(self, name):
+        self.name = name
 
 
+car1 = ToyotaCar("Land Cruiser")
+car2 = ToyotaCar("Previous")
 
+print(car1.name)
 
+car1.start()
+car1.drive()
+car1.stop()
